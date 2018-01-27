@@ -1,0 +1,36 @@
+{
+    "name": "斗鱼弹幕脚本",
+    "manifest_version": 2,
+    "version": "1.0",
+    "description": "five five open is guabi.",
+    "browser_action": {
+        "default_popup": "hello.html",
+        "default_title": "斗鱼弹幕脚本",
+        "default_icon": "reed.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.douyu.com/*"
+            ],
+            "js": [
+                "jquery-3.3.1.min.js",
+                "myscript.js"
+            ],
+            "run_at":"document_end"
+        }
+    ],
+    "commands": {
+        "_execute_browser_action": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+5",
+                "mac": "MacCtrl+Shift+5"
+            },
+            "description": "Opens hello.html"
+        }
+    },
+    "permissions": [
+        "tabs",
+        "https://*/*"
+    ]
+}

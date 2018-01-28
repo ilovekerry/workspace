@@ -8,6 +8,9 @@
         "default_title": "斗鱼弹幕脚本",
         "default_icon": "reed.png"
     },
+    "background":{
+        "scripts":["jquery-3.3.1.min.js"]
+    },
     "content_scripts": [
         {
             "matches": [
@@ -17,6 +20,7 @@
                 "jquery-3.3.1.min.js",
                 "myscript.js"
             ],
+            "css":["main.css"],
             "run_at":"document_end"
         }
     ],
@@ -32,5 +36,8 @@
     "permissions": [
         "tabs",
         "https://*/*"
+    ],
+    "web_accessible_resources": [
+        "noble.png"
     ]
 }
